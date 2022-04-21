@@ -33,7 +33,7 @@ public class MainActivity extends AppCompatActivity {
 //        Handle for retrofit interface
         GetBeerData data = RetrofitInstance.getRetrofitInstance();
 
-//        Call the method with parameter in the interface to get the employee data
+//        Call the method with parameter in the interface to get the beer data
         Call<BeerList> call =data.getBeerData();
 
 //        Log the URL called
