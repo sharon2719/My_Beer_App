@@ -3,7 +3,10 @@ package com.example.mybeerapp.model;
 import com.google.gson.annotations.SerializedName;
 
 public class Beer {
+    public Beer beer;
 
+    @SerializedName("id")
+    private int id;
     @SerializedName("name")
     private String name;
 
@@ -16,11 +19,27 @@ public class Beer {
     @SerializedName ("first_brewed")
     private String firstBrewed;
 
-    public Beer(String name, String tagline, String description, String firstBrewed) {
+  public Beer (int id,String name,String tagline,String description,String firstBrewed){
+        this.id =id;
         this.name = name;
         this.tagline = tagline;
         this.description = description;
         this.firstBrewed = firstBrewed;
+    }
+    public Beer() {
+        this.id =id;
+        this.name = name;
+        this.tagline = tagline;
+        this.description = description;
+        this.firstBrewed = firstBrewed;
+    }
+
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
     }
 
     public String getName() {
